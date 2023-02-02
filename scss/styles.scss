@@ -1,0 +1,329 @@
+//файл обнуляющих стилей
+@import "nullstyle.scss";
+
+//Подключение шрифтов
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/*========================================*/
+//Функции rem  и em
+$fz: 16;
+
+@function rem($size) {
+    $remSize: calc($size / $fz);
+    @return $remSize * 1rem;
+}
+
+@function em($size, $parSize) {
+    $emSize: calc($size / $parSize);
+    @return $emSize * 1em;
+}
+
+//Для расчета % значения
+@function percent($value1, $value2) {
+    $percentValue: calc($value1 / $value2 * 100%);
+    @return $percentValue;
+}
+
+/*===========================================*/
+
+//Шрифт по умолчанию
+$fontFamily: 'Montserrat', sans-serif;
+$fontSize: rem(16);
+
+//Основные цвета
+$mainColor: #333333; //цвет шрифта
+$greenColor:  #547147;
+$backgroundColor: #F5F5F5;
+
+
+
+/*=======Настройка адптивной сетки============-*/
+
+//Минимальная ширина страницы
+$minWidth: 320;
+//Ширина полотна (макета)
+$maxWidth: 1440;
+//Ширина ограничивающего контейнера
+$maxWidthContainer: 1300;
+//Общий отступ у контейнера
+$containerPadding: 40;
+
+//Ширина срабатывания первого брейкпойнта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+//Брейк-пойнты
+$pc: em($containerWidth, $fz); //ПК, ноутбуку, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98, $fz); // Плантшеты нектооые тедефоны в горизонтальном положении
+$mobile: em(767.98, $fz); // Телефоны L
+$mobileSmall: em(479.98, $fz); //Телефоны
+
+//Тип адаптива
+//1 = отзывчивыость (у контейнера нет брейкпойнтов)
+//2 = по брейк-пойнам ( контейнер меняет свою ширину по брейк-пойнтам)
+$responsiveType: 1;
+
+
+//Mixin 
+// @mixin adaptiveValue($type, $maxtSize,  $minSize){
+
+
+// }
+
+/*===============Ограничивающий контейнер======================*/
+
+/*Стили будут применяться дл всех классов содержащих *__container 
+Например, header__container 
+*/
+
+@if ($responsiveType==1) {
+    //отзывчивая
+    [class*="__container"] {
+        @if ($maxWidthContainer>0) {
+            max-width: rem($containerWidth);
+            margin: 0 auto;
+            min-height: 100%;
+            width: 100%;
+        }
+        @if ($containerPadding>0) {
+            @if ($maxWidthContainer>0) {
+                padding: 0 rem(calc($containerPadding / 2));
+            } 
+        }
+    }
+} @else {
+    //по брейк-поинтам
+    [class*="__container"] {
+        margin: 0 auto;
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        } @else {
+            @if ($containerPadding>0){
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+        @media(max-width: $pc) {
+            max-width: rem(970);
+        }
+    }
+}
+
+/*Стили будут применяться для всех классов *-ibg. Например, main__image-ibg*/
+[class*="-ibg"] {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+
+// Стили иконки меню Burger
+.icon-menu{
+    display: none;
+    @media(max-width: $mobile){
+        display: block;
+        position: relative;
+        width: rem(30);
+        height: rem(18);
+        flex: 0 0 rem(30);
+        z-index: 5;
+        @media (any-hover: none) {
+            cursor: default;
+        }
+        span, 
+        &::before,
+        &::after {
+            content: "";
+            transition: all 0.3s ease 0s;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: rem(2);
+            background-color: #000;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span{
+            top: calc(50% - rem(1));
+        }
+    }
+}
+
+.icon-menu.menu-open{
+    span {
+        width: 0
+    }
+
+    &::before,
+    &::after {
+    }
+
+    &::before{
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+    }
+}
+
+//FullScreen
+.fs {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+/*-------------------------------*/
+body{
+    font-family: $fontFamily;
+    color: $mainColor;
+    font-weight: 600;
+    .lock{
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+/*-------------------------------*/
+.wrapper {
+    
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    line-height: calc(20 / 16 * 100%);
+    
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(15);
+        padding-top: rem(16);
+        padding-bottom: rem(16);
+        min-height: rem(96);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom:0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #547147;
+        }
+        @media(max-width: $mobile) {
+            min-height: 60px;
+        }
+    }
+
+	&__logo {
+	}
+
+	&__menu {
+        
+	}
+
+	&__contacts {
+        display: flex;
+        align-items: center;
+        a[href^="tel:"] {
+            margin-right: rem(30);
+        }
+	}
+
+	&__socials {
+	}
+}
+
+.logo {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        column-gap: rem(14);
+
+		&__img {
+		}
+
+		&__text {
+		}
+}
+
+.menu {
+
+		&__body {
+            @media(max-width: $mobile) {
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                transition: all 0.3s ease 0s;
+                background-color: #fff;
+                padding: rem(90) rem(15) rem(30) rem(15);
+                &::before {
+                    content: "";
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: rem(60);
+                    background-color: #fff;
+                    z-index: 2;
+                }
+		    }
+        }
+
+		&__list {
+            @media(min-width: $mobile) {
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: rem(20);
+                column-gap: rem(56);
+            }
+		}
+
+		&__item {
+		}
+
+		&__link {
+            padding-bottom: rem(3);
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover){
+                &:hover{
+                    border-bottom: 1px solid #404936;
+                }
+            }
+		}
+}
+
+.socials {
+    display: flex;
+    column-gap: rem(20);
+	&__link {
+        @media (any-hover: hover){
+
+        }
+	}
+}
+
+
+
