@@ -1,16 +1,19 @@
-$("img.img-svg").each(function () {
-    var $img = $(this);
-    var imgClass = $img.attr("class");
-    var imgURL = $img.attr("src");
-    $.get(imgURL, function (data) {
-        var $svg = $(data).find("svg");
-        if (typeof imgClass !== "undefined") {
-            $svg = $svg.attr("class", imgClass + " replaced-svg");
-        }
-        $svg = $svg.removeAttr("xmlns:a");
-        if (!$svg.attr("viewBox") && $svg.attr("height") && $svg.attr("width")) {
-            $svg.attr("viewBox", "0 0 " + $svg.attr("height") + " " + $svg.attr("width"))
-        }
-        $img.replaceWith($svg);
-    }, "xml");
+//Burger
+$(document).ready(function(){
+    $('.icon-menu').click(function(event){
+        $('.icon-menu, .menu__body').toggleClass('menu-open');
+        $('body'),toggleClass('lock');
+    });
 });
+
+$(window).resize(function () { 
+    var width = $('body').innerWidth();
+    console.log(width);
+    if (width < 720) {
+        $('.logo__text').addClass('hidden');
+        $('.header__socials').addClass('hidden');
+    } 
+});
+
+
+
