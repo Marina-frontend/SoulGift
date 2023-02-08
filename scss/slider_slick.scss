@@ -1,0 +1,83 @@
+/* Основные стили */
+
+/* Слайдер */
+.slick-slider{
+	min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+	align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide{}
+/* Слайд активный */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки */
+.slick-dots{}
+.slick-dots li{}
+.slick-dots button{}
+
+
+/*------------------------*/
+.slider-main {
+    
+}
+
+.slider-main .slick-slide{
+    position: relative; 
+    margin-bottom: rem(71);
+}
+
+.slider-main .slick-dots{
+    position: absolute;
+	display: flex;
+}
+
+.slider-main .slick-dots li{
+	list-style: none;
+	margin: 0px 10px;
+}
+
+.slider-main .slick-dots button{
+	width: 20px;
+	height: 20px;
+	background-color: #000;
+	border-radius: 50%;  
+    font-size: 0;
+}
+
+.slider-main .slick-dots li.slick-active button{
+	background-color: transparent;
+	border: 2px solid #000;
+}
+
+.slider-main__item {
+	
+}
+.slider-main__item img{
+	max-width: 100%;
+}
+.slider-main__item.slick-center{
+	
+}

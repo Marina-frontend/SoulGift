@@ -1,5 +1,6 @@
 //файл обнуляющих стилей
 @import "nullstyle.scss";
+@import "slider_slick.scss";
 
 //Подключение шрифтов
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -222,6 +223,8 @@ body{
     z-index: 100;
     line-height: calc(20 / 16 * 100%);
     padding: 0 rem(20);
+    background-color: #fff;
+    opacity: 0.95;
     
     &__container{
         display: flex;
@@ -255,10 +258,11 @@ body{
 
 	&__contacts {
         display: flex;
-        align-items: center;
+        align-items: center;  
         a[href^="tel:"] {
             margin-right: rem(30);
             z-index: 100;
+            white-space: nowrap;
             @media(max-width: $mobile) {
                 margin-right: rem(20);
             }
@@ -321,6 +325,7 @@ body{
                 flex-wrap: wrap;
                 row-gap: rem(20);
                 column-gap: rem(56);
+                justify-content: center;
             }
 		}
 
@@ -345,9 +350,6 @@ body{
     display: flex;
     column-gap: rem(20);
 	&__link {
-        @media (any-hover: hover){
-
-        }
 	}
 }
 
@@ -362,6 +364,126 @@ body{
             display: none;
         }
     }
+}
+
+/*=====main======================================*/
+
+.main {
+
+    &__container {
+        margin-top: rem(136);
+        display: grid;
+    }
+
+    &__slider {
+        
+    }
+
+    &__items {
+        display: grid;
+
+        @media(min-width: $mobile) {
+            display: flex;
+            gap: rem(86);
+        }
+    }
+
+    &__item {
+
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        line-height: percent(20, 16);
+        @media(min-width: $mobile) {
+            flex: 0 1 auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: rem(80);
+            margin-right: rem(12);
+        }
+    }    
+}
+
+.item {
+
+    &__image {
+    }
+
+    &__text {
+    }
+}
+
+
+.slider-main {
+        &__item {
+            position: relative;
+        }
+    
+        &__content {
+            position: absolute;
+            z-index: 50;
+            bottom: rem(50);
+            left: rem(50);
+        }
+    
+        &__price {
+            font-weight: 700;
+            font-size: rem(30);
+            line-height: percent(34, 30);
+            color: #FFFFFF;
+            background-color: rgba(223, 166, 80, 1);
+            border-radius: 40px;
+            padding: rem(10) rem(20);
+            gap: rem(10);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+            @media(max-width: $mobile) {
+                font-size: rem(12);
+                padding: rem(6) rem(10);
+                border: 2px solid #DFA650;
+                width: rem(74);
+                height: rem(28);
+            }
+    
+        }
+    
+        &__title {
+            font-weight: 800;
+            font-size: rem(80);
+            line-height: percent(84, 80);
+            text-transform: uppercase;
+            color: #FFFFFF;
+                &:not(:last-child) {
+                    margin-bottom: rem(30);
+                }
+        }
+        
+    
+        &__btn {
+            font-weight: 700;
+            font-size: rem(20);
+            line-height: percent(24, 20);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: rem(20) rem(30);
+            gap: rem(10);
+            width: 303px;
+            height: 64px;
+            background: #F6F1E4;
+            border-radius: 50px;
+        }
+    
+        &__img {
+        }
 }
 
 
