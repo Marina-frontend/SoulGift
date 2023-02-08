@@ -373,10 +373,16 @@ body{
     &__container {
         margin-top: rem(136);
         display: grid;
+        @media(max-width: $mobile) {
+            margin-top: rem(80);
+        }
     }
 
     &__slider {
-        
+        margin-bottom: rem(71);
+        @media(max-width: $mobile) {
+            margin-bottom: rem(30);
+        }
     }
 
     &__items {
@@ -384,12 +390,12 @@ body{
 
         @media(min-width: $mobile) {
             display: flex;
-            gap: rem(86);
+            justify-content: space-between;
+            flex: 0 1 25%;
         }
     }
 
     &__item {
-
         display: flex;
         align-items: center;
         font-weight: 600;
@@ -420,13 +426,16 @@ body{
 .slider-main {
         &__item {
             position: relative;
-        }
+            }
     
         &__content {
             position: absolute;
             z-index: 50;
             bottom: rem(50);
             left: rem(50);
+            @media(max-width: $mobile) {
+                left: rem(20);
+            }
         }
     
         &__price {
@@ -448,8 +457,9 @@ body{
                 font-size: rem(12);
                 padding: rem(6) rem(10);
                 border: 2px solid #DFA650;
-                width: rem(74);
-                height: rem(28);
+                &:not(:last-child) {
+                    margin-bottom: rem(10);
+                }
             }
     
         }
@@ -462,6 +472,12 @@ body{
             color: #FFFFFF;
                 &:not(:last-child) {
                     margin-bottom: rem(30);
+                }
+                @media(max-width: $mobile) {
+                    font-size: rem(28);
+                    &:not(:last-child) {
+                        margin-bottom: rem(20);
+                    }
                 }
         }
         
@@ -476,13 +492,17 @@ body{
             align-items: center;
             padding: rem(20) rem(30);
             gap: rem(10);
-            width: 303px;
-            height: 64px;
+            max-width: 303px;
             background: #F6F1E4;
             border-radius: 50px;
+            @media(max-width: $mobile) {
+                font-size: rem(14);
+                padding: rem(11) rem(22);
+            }
         }
     
         &__img {
+           
         }
 }
 

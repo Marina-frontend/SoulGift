@@ -28,7 +28,6 @@
 /*------------------------*/
 .slider-main .slick-slide {
   position: relative;
-  margin-bottom: rem(71);
 }
 
 .slider-main .slick-dots {
@@ -48,10 +47,20 @@
   border-radius: 50%;
   font-size: 0;
 }
+@media (max-width: 767px) {
+  .slider-main .slick-dots button {
+    width: 10px;
+    height: 10px;
+  }
+}
 
 .slider-main .slick-dots li.slick-active button {
   background-color: transparent;
   border: 2px solid #000;
+}
+
+.slider-main__item {
+  min-height: rem(380);
 }
 
 .slider-main__item img {

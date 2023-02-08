@@ -1,3 +1,4 @@
+
 /* Основные стили */
 
 /* Слайдер */
@@ -41,12 +42,10 @@
 
 /*------------------------*/
 .slider-main {
-    
 }
 
 .slider-main .slick-slide{
-    position: relative; 
-    margin-bottom: rem(71);
+    position: relative;     
 }
 
 .slider-main .slick-dots{
@@ -65,6 +64,10 @@
 	background-color: #000;
 	border-radius: 50%;  
     font-size: 0;
+    @media(max-width: 767px) {
+        width: 10px;
+	    height: 10px;
+    }
 }
 
 .slider-main .slick-dots li.slick-active button{
@@ -73,10 +76,11 @@
 }
 
 .slider-main__item {
-	
+	min-height: rem(380);
 }
 .slider-main__item img{
 	max-width: 100%;
+    
 }
 .slider-main__item.slick-center{
 	
