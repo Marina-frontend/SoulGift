@@ -387,11 +387,9 @@ body{
 
     &__items {
         display: grid;
-
-        @media(min-width: $mobile) {
+        @media(min-width: rem(862)) {
             display: flex;
             justify-content: space-between;
-            flex: 0 1 25%;
         }
     }
 
@@ -401,7 +399,10 @@ body{
         font-weight: 600;
         line-height: percent(20, 16);
         @media(min-width: $mobile) {
-            flex: 0 1 auto;
+            flex: 0 1 25%;
+            &:not(:last-child) {
+                margin-right: rem(10);
+            }
         }
 
         img {
@@ -426,7 +427,11 @@ body{
 .slider-main {
         &__item {
             position: relative;
+            height: rem(632);
+            @media(max-width: $mobile) {
+                max-height: rem(380);
             }
+        }
     
         &__content {
             position: absolute;
@@ -435,6 +440,7 @@ body{
             left: rem(50);
             @media(max-width: $mobile) {
                 left: rem(20);
+                bottom: rem(70);
             }
         }
     
@@ -501,9 +507,77 @@ body{
             }
         }
     
-        &__img {
-           
+        &__img-ibg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            object-position: 60% 50%;
         }
 }
 
+/*=======products=========================*/
+
+.catalog {
+
+    &__container {
+        margin-top: rem(120);
+        @media(max-width: $mobile) {
+            margin-top: rem(64);
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(60);
+            @media(max-width: $mobile){
+                margin-bottom: rem(30);
+            }
+        }  
+    }
+
+    &__products {
+    }
+
+    &__item {
+    }
+}
+.title {
+    font-weight: 600;
+    font-size: rem(40);
+    line-height: percent(50, 40);
+    text-align: center;
+    @media(max-width: $mobile) {
+        font-size: rem(21);
+        line-height: percent(25, 21);
+    }
+}
+.item-product {
+
+    &__image-ibg {
+    }
+
+    &__body {
+    }
+
+    &__name {
+    }
+
+    &__link-title {
+    }
+
+    &__price {
+    }
+
+    &__btn {
+    }
+
+    &__link {
+    }
+}
+.button {
+}
 

@@ -26,13 +26,24 @@
 /* Стрелка не активная */
 /* Точки */
 /*------------------------*/
-.slider-main .slick-slide {
+.slider-main {
   position: relative;
 }
 
 .slider-main .slick-dots {
   position: absolute;
   display: flex;
+  align-items: flex-end;
+  text-align: center;
+  bottom: 30px;
+  right: 30px;
+}
+@media (max-width: 767px) {
+  .slider-main .slick-dots {
+    bottom: 20px;
+    align-items: center;
+    right: 40%;
+  }
 }
 
 .slider-main .slick-dots li {
@@ -43,7 +54,7 @@
 .slider-main .slick-dots button {
   width: 20px;
   height: 20px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 50%;
   font-size: 0;
 }
@@ -56,7 +67,12 @@
 
 .slider-main .slick-dots li.slick-active button {
   background-color: transparent;
-  border: 2px solid #000;
+  border: 2px solid #fff;
+}
+@media (max-width: 767px) {
+  .slider-main .slick-dots li.slick-active button {
+    border: 1px solid #fff;
+  }
 }
 
 .slider-main__item {
