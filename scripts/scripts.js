@@ -1,7 +1,7 @@
 //Burger
 $(document).ready(function(){
     $('.icon-menu').click(function(event){
-        $('.icon-menu, .menu__body').toggleClass('menu-open');
+        $('.icon-menu, .header__menu').toggleClass('menu-open');
         $('body'),toggleClass('lock');
     });
 });
