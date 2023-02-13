@@ -91,16 +91,14 @@
 .slider-promo .slick-dots {
   position: absolute;
   display: flex;
-  align-items: flex-end;
   text-align: center;
   bottom: 30px;
-  right: 30px;
+  right: 50%;
+  align-items: center;
 }
 @media (max-width: 767px) {
   .slider-promo .slick-dots {
-    bottom: 20px;
-    align-items: center;
-    right: 40%;
+    display: none;
   }
 }
 
@@ -109,7 +107,7 @@
   margin: 0px 10px;
 }
 
-.slider-promo.slick-dots button {
+.slider-promo .slick-dots button {
   width: 20px;
   height: 20px;
   background-color: #547147;
@@ -117,18 +115,18 @@
   font-size: 0;
 }
 @media (max-width: 767px) {
-  .slider-promo.slick-dots button {
+  .slider-promo .slick-dots button {
     width: 10px;
     height: 10px;
   }
 }
 
-.slider-promo.slick-dots li.slick-active button {
+.slider-promo .slick-dots li.slick-active button {
   background-color: transparent;
   border: 2px solid #547147;
 }
 @media (max-width: 767px) {
-  .slider-promo.slick-dots li.slick-active button {
+  .slider-promo .slick-dots li.slick-active button {
     border: 1px solid #547147;
   }
 }

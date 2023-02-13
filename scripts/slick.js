@@ -3,8 +3,8 @@ $(document).ready(function(){
         arrows: false,
 		dots:true,
 		slidesToShow:1,
-		autoplay:false,
-		speed:1000,
-		autoplaySpeed:800,
+		autoplay: true,
+		speed: 2000,
+		autoplaySpeed:3000,
 	});
 });
