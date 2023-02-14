@@ -8,10 +8,11 @@ $(document).ready(function(){
 
 $(window).resize(function () { 
     var width = $('body').innerWidth();
-    console.log(width);
     if (width < 720) {
         $('.logo__text').addClass('hidden');
         $('.header__socials').addClass('hidden');
+        // $('.slider-promo__img-ibg').addClass('hidden');
+
     } 
 });
 

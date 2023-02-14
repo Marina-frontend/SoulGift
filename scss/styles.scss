@@ -518,12 +518,20 @@ body.lock{
             align-items: center;
             padding: rem(20) rem(30);
             gap: rem(10);
-            max-width: 303px;
+            max-width: 305px;
             background: #F6F1E4;
             border-radius: 50px;
+            border: 1px solid #F6F1E4;
+            transition: all 0.5s ease 0;
             @media(max-width: $mobile) {
                 font-size: rem(14);
                 padding: rem(11) rem(22);
+            }
+            @media (any-hover: hover){
+                &:hover{
+                    color: #F6F1E4;
+                    background: inherit;
+                }
             }
         }
     
@@ -591,8 +599,12 @@ body.lock{
     border-radius: 20px;
     display: grid;
     grid-auto-flow: row;
-    grid-template: 1fr auto / 1fr;
+    grid-template: auto 1fr / 1fr;
     max-width: rem(407);
+    padding-bottom: rem(28);
+    @media(max-width: $mobile){
+        padding-bottom: rem(12);
+    }
 
     &_promotion{
     }
@@ -611,7 +623,7 @@ body.lock{
         grid-template: 1fr auto minmax(32px, 48px) minmax(16px, 24px)/ 1fr;
         justify-items: center;
         text-align: center;
-        align-items: center;
+        align-items: start;
         width: 100%;
         padding: rem(30);
     }
@@ -663,10 +675,16 @@ body.lock{
     &__link {
         font-weight: 500;
         font-size: rem(20);
-        line-height: percent(24, 20);     
+        line-height: percent(24, 20); 
+        margin: rem(15) 0;  
         color: #888888;
         @media(max-width: $mobile) {
             font-size: rem(12);
+        }
+        @media (any-hover: hover){
+            &:hover{
+                border-bottom: 1px solid #888888;
+            }
         }
     }
 }
@@ -731,14 +749,21 @@ body.lock{
         border-radius: rem(20);
         overflow: hidden;
         height: 100%;
+        @media(max-width: $mobile) {
+            grid-template:  1fr 1fr / 1fr;
+        }
     }
 
     &__body {
+        position: relative;
         margin: rem(60) rem(106) rem(30) rem(60);
         max-width: rem(579);
         display: grid;
         grid-auto-flow: row;
         grid-template:  minmax(53px , 64px) 1fr rem(65) auto/ 1fr;
+        @media(max-width: $mobile) {
+            margin: rem(30) rem(10) rem(30) rem(20);
+        }
     }
 
     &__label {
@@ -749,14 +774,11 @@ body.lock{
         text-transform: uppercase;
         color: #FFFFFF;
         z-index: 3;
-        // &:not(:last-child) {
-        //     margin-bottom: rem(34);
-        // }
         &::before {
             position: absolute;
             content: "";
-            width: 379px;
-            height: 63px;
+            width: rem(379);
+            height:rem(63);
             left: -75px;
             top: -15px;        
             color: #333333;
@@ -765,6 +787,14 @@ body.lock{
             border-bottom: none;
             background: #547147;
             transform: perspective(15px) rotateX(-1deg);
+            @media(max-width: $mobile) {
+                height:rem(54);
+                width: rem(269);
+                left: -65px;
+            }
+        }
+        @media(max-width: $mobile) {
+            font-size: rem(20);
         }
     }
 
@@ -776,6 +806,9 @@ body.lock{
         color: #404936;
         &:not(:last-child) {
             margin-bottom: rem(20);
+        }
+        @media(max-width: $mobile) {
+            font-size: rem(38);
         }
     }
 
@@ -789,6 +822,9 @@ body.lock{
     }
 
     &__img-ibg  {
+        display: none;
+        @media(min-width: $mobile){
+        display: flex;
         position: absolute;
         top: 0;
         right: 0;
@@ -802,11 +838,37 @@ body.lock{
             left: 0;
             top: 0;
             height: 100%;
-            width: rem(130);
+            width: rem(65);
             background: #547147;
-            border: 1px solid;
-            transform: perspective(15px) rotateX(-1deg);
+            transform: skew(-15deg);
+            z-index: 3;
+            }
         }
+    }
+    &__img_m-ibg  {
+        display: none;
+        @media(max-width: $mobile){
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: rem(296);
+        max-height: rem(296);
+        object-fit: contain;
+        border-radius: 20px;
+        border-radius: rem(20);
+        &:before {
+            content: "";
+            left: 0;
+            top: 0;
+            height: rem(38);
+            width: 100%;
+            background: #547147;
+            transform:  rotate(2deg);
+            z-index: 3;
+        }
+    }
     }
 }
 
@@ -824,6 +886,9 @@ body.lock{
         text-transform: uppercase;
         color: #A3A3A3;
         text-decoration: line-through;
+        @media(max-width: $mobile) {
+            font-size: rem(22);
+        }
         }
 
         &_new {
@@ -832,6 +897,9 @@ body.lock{
             line-height: percent(34, 35);
             text-transform: uppercase;
             color: #404936;
+            @media(max-width: $mobile) {
+                font-size: rem(30);
+            }
         }
     }
 }
@@ -856,6 +924,7 @@ body.lock{
         border-radius: rem(20);
         object-fit: cover;
         object-position: 70% 70%;
+        
 
         @media(max-width: $mobile) {
             grid-row: 2 / 3;
