@@ -11,8 +11,6 @@ $(window).resize(function () {
     if (width < 720) {
         $('.logo__text').addClass('hidden');
         $('.header__socials').addClass('hidden');
-        // $('.slider-promo__img-ibg').addClass('hidden');
-
     } 
 });
 
