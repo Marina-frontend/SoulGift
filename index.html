@@ -1,378 +1,572 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
     <title>Дари Душой</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <div class="wrapper">
-            <header class="header">
-                <div class="header__container">
-                    <a class="header__logo logo" href="#" target="_blank">
-                        <img class="logo__img" src="images/logo.png" alt="logo__picture">
-                        <img class="logo__text" src="images/logo_text.png" alt="Дари Душой">
+      <header class="header">
+        <div class="header__container">
+          <a class="header__logo logo" href="#" target="_blank">
+            <img class="logo__img" src="images/logo.png" alt="logo__picture" />
+            <img
+              class="logo__text"
+              src="images/logo_text.png"
+              alt="Дари Душой"
+            />
+          </a>
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#catalog" class="menu__link">Каталог</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#promo" class="menu__link">Акции</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__contacts contacts">
+            <a class="contacts__link" href="tel:+79991234567"
+              >+7 (999) 123-45-67</a
+            >
+            <div class="contacts__socials socials">
+              <a href="#" class="socials__link"
+                ><img src="images/socials/vk.svg" alt="vk"
+              /></a>
+              <a href="#" class="socials__link"
+                ><img src="images/socials/instagram.svg" alt="vk"
+              /></a>
+            </div>
+            <button class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="main">
+          <div class="main__container">
+            <div class="main__slider slider-main slider">
+              <div class="slider-main__item slider__item">
+                <div class="slider-main__content">
+                  <div class="slider-main__price">от 990 ₽</div>
+                  <div class="slider-main__title">
+                    Конная <br />
+                    прогулка
+                  </div>
+                  <a href="" class="slider-main__btn">Заказать впечатление</a>
+                </div>
+                <img
+                  class="slider-main__img-ibg"
+                  src="images/main/01.jpg"
+                  alt="Конная прогулка"
+                />
+              </div>
+              <div class="slider-main__item slider__item">
+                <div class="slider-main__content">
+                  <div class="slider-main__price">3000 ₽</div>
+                  <div class="slider-main__title">Полет на мотопараплане</div>
+                  <a href="" class="slider-main__btn">Заказать впечатление</a>
+                </div>
+                <img
+                  class="slider-main__img-ibg"
+                  src="images/main/02.jpg"
+                  alt="Полет на мотопараплане"
+                />
+              </div>
+              <div class="slider-main__item slider__item">
+                <div class="slider-main__content">
+                  <div class="slider-main__price">от 3 500 ₽</div>
+                  <div class="slider-main__title">
+                    Прогулка на <br />
+                    яхте «Чайка»
+                  </div>
+                  <a href="" class="slider-main__btn">Заказать впечатление</a>
+                </div>
+                <img
+                  class="slider-main__img-ibg"
+                  src="images/main/03.jpg"
+                  alt="Прогулка на яхте «Чайка»"
+                />
+              </div>
+              <div class="slider-main__item slider__item">
+                <div class="slider-main__content">
+                  <div class="slider-main__price">от 3 000 ₽</div>
+                  <div class="slider-main__title">
+                    Вечер в <br />
+                    куполе
+                  </div>
+                  <a href="" class="slider-main__btn">Заказать впечатление</a>
+                </div>
+                <img
+                  class="slider-main__img-ibg"
+                  src="images/main/04.jpg"
+                  alt="Вечер в куполе"
+                />
+              </div>
+            </div>
+            <div class="main__items">
+              <div class="main__item item">
+                <img
+                  class="item__image"
+                  src="images/main/icon_01.png"
+                  alt="Впечатления по цене партнёра"
+                />
+                <div class="item__text">Впечатления по цене партнёра</div>
+              </div>
+              <div class="main__item item">
+                <img
+                  class="item__image"
+                  src="images/main/icon_02.png"
+                  alt="Бесплатная доставка в день заказа"
+                />
+                <div class="item__text">Бесплатная доставка в день заказа</div>
+              </div>
+              <div class="main__item item">
+                <img
+                  class="item__image"
+                  src="images/main/icon_03.png"
+                  alt="Красивые сертификаты на любое впечатление"
+                />
+                <div class="item__text">
+                  Красивые сертификаты на любое впечатление
+                </div>
+              </div>
+              <div class="main__item item">
+                <img
+                  class="item__image"
+                  src="images/main/icon_04.png"
+                  alt="Проверенные партнёры"
+                />
+                <div class="item__text">Проверенные партнёры</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="catalog" class="catalog">
+          <div class="catalog__container">
+            <h2 class="catalog__title title">Каталог впечатлений</h2>
+            <div class="catalog__products">
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/01.jpg"
+                    alt="Конная прогулка"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Конная прогулка
                     </a>
-                    <div class="header__menu menu">
-                        <nav class="menu__body">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a href="#catalog" class="menu__link">Каталог</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#promo" class="menu__link">Акции</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="header__contacts contacts">
-                            <a class="contacts__link" href="tel:+79991234567">+7 (999) 123-45-67</a>
-                            <div class="contacts__socials socials">
-                            <a href="#" class="socials__link"><img src="images/socials/vk.svg" alt="vk"></a>
-                            <a href="#" class="socials__link"><img src="images/socials/instagram.svg" alt="vk"></a>
-                            </div>
-                        <button class="menu__icon icon-menu"><span></span></button>
-                    </div>
+                  </h4>
+                  <div class="item-product__price">от 990 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
                 </div>
-            </header>
-            <main>
-                <section class="main">
-                    <div class="main__container">
-                        <div class="main__slider slider-main slider">
-                            <div class="slider-main__item slider__item">
-                                    <div class="slider-main__content">
-                                        <div class="slider-main__price">от 990 ₽</div>
-                                        <div class="slider-main__title">Конная <br> прогулка</div>
-                                        <a href="" class="slider-main__btn">Заказать впечатление</a>
-                                    </div>
-                                    <img class="slider-main__img-ibg" src="images/main/01.jpg" alt="Конная прогулка">
-                            </div>
-                            <div class=" slider-main__item slider__item">
-                                <div class="slider-main__content">
-                                    <div class="slider-main__price">3000 ₽</div>
-                                    <div class="slider-main__title">Полет на мотопараплане</div>
-                                    <a href="" class="slider-main__btn">Заказать впечатление</a>
-                                </div>
-                                <img class="slider-main__img-ibg" src="images/main/02.jpg" alt="Полет на мотопараплане">
-                            </div>
-                            <div class=" slider-main__item slider__item">
-                                <div class="slider-main__content">
-                                    <div class="slider-main__price">от 3 500 ₽</div>
-                                    <div class="slider-main__title">Прогулка на <br> яхте «Чайка»</div>
-                                    <a href="" class="slider-main__btn">Заказать впечатление</a>
-                                </div>
-                                <img class="slider-main__img-ibg" src="images/main/03.jpg" alt="Прогулка на яхте «Чайка»">
-                            </div>
-                            <div class=" slider-main__item slider__item">
-                                <div class="slider-main__content">
-                                    <div class="slider-main__price">от 3 000 ₽</div>
-                                    <div class="slider-main__title">Вечер в <br> куполе</div>
-                                    <a href="" class="slider-main__btn">Заказать впечатление</a>
-                                </div>
-                                <img class="slider-main__img-ibg" src="images/main/04.jpg" alt="Вечер в куполе">
-                            </div>
-                        </div>
-                        <div class="main__items">
-                            <div class="main__item item">
-                                <img class="item__image" src="images/main/icon_01.png" alt="Впечатления по цене партнёра">
-                                <div class="item__text">Впечатления по цене партнёра</div>
-                            </div>
-                            <div class="main__item item">
-                                <img class="item__image" src="images/main/icon_02.png" alt="Бесплатная доставка в день заказа">
-                                <div class="item__text">Бесплатная доставка в день заказа</div>
-                            </div>
-                            <div class="main__item item">
-                                <img class="item__image" src="images/main/icon_03.png" alt="Красивые сертификаты на любое впечатление">
-                                <div class="item__text">Красивые сертификаты на любое впечатление</div>
-                            </div>
-                            <div class="main__item item">
-                                <img class="item__image" src="images/main/icon_04.png" alt="Проверенные партнёры">
-                                <div class="item__text">Проверенные партнёры</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="catalog" class="catalog">
-                    <div class="catalog__container">
-                        <h2 class="catalog__title title">Каталог впечатлений</h2>
-                        <div class="catalog__products">
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/01.jpg" alt="Конная прогулка">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Конная прогулка
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">от 990 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/02.jpg" alt="Полет на мотопараплане">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Полет на мотопараплане
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">3 000 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product item-product_promotion">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/03.jpg" alt="Полет в аэротрубе">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Полет в аэротрубе
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">от 1 800 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/04.jpg" alt="Вечер в куполе">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Вечер в куполе
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">3 000 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/05.jpg" alt="Прогулка на яхте «Чайка»">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Прогулка на яхте «Чайка»
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">от 3 500 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/06.jpg" alt="Велопрогулка с пикником">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Велопрогулка с пикником
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">3 000 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/07.jpg" alt="Драйв на квадроциклах">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Драйв на квадроциклах
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">от 1 800 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/08.jpg" alt="Запись песни в студии">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Запись песни в студии
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">5 000 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/09.jpg" alt="Поездка на болотоходах">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Поездка на болотоходах
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">5 000 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/10.jpg" alt="Игра в виртуальной реальности">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Игра в виртуальной реальности
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">600 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                            <article class="catalog__item item-product">
-                                <a href="#" class="item-product__link">
-                                    <img class="item-product__image-ibg" src="images/products/11.jpg" alt="Романтический пикник">
-                                </a>
-                                <div class="item-product__body">
-                                    <h4 class="item-product__name subtitle">
-                                        <a href="#" class="item-product__link-title">
-                                            Романтический пикник
-                                        </a>
-                                    </h4>
-                                    <div class="item-product__price">2 500 ₽</div>
-                                    <a class="item-product__btn button">Заказать</a>
-                                    <a href="" class="item-product__link">Подробнее</a>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-                <section id="promo" class="promo">
-                    <div class="promo__container">
-                        <div class="promo__slider slider slider-promo">
-                            <div class="slider-promo__item slider__item">
-                                <div class="slider-promo__body">
-                                    <div class="slider-promo__label">Акция месяца</div>
-                                    <h2 class="slider-promo__title">полёт в аэротрубе для двоих!</h2>
-                                    <div class="slider-promo__prices prices-promo">
-                                        <div class="prices-promo__price_old">4 000 ₽</div>
-                                        <div class="prices-promo__price_new">3 200 ₽</div>
-                                    </div>
-                                    <a href="#" class="slider-promo__button button">Заказать впечатление</a>
-                                </div>
-                                <div class="slider-promo__img-ibg">
-                                    <img src="images/promo slider/slide01/photoSlide01.png" alt="Полёт в аэротрубе для двоих!">
-                                </div>
-                                <div class="slider-promo__img_m-ibg">
-                                    <img src="images/promo slider/slide01/photoSlide01_mobile.png" alt="Полёт в аэротрубе для двоих!">
-                                </div>
-                            </div>
-                            <div class="slider-promo__item slider__item">
-                                <div class="slider-promo__body">
-                                    <div class="slider-promo__label">Акция месяца</div>
-                                    <h2 class="slider-promo__title">полет на мотопараплане </h2>
-                                    <div class="slider-promo__prices prices-promo">
-                                        <div class="prices-promo__price_old">6 000 ₽</div>
-                                        <div class="prices-promo__price_new">5 200 ₽</div>
-                                    </div>
-                                    <a href="#" class="slider-promo__button button">Заказать впечатление</a>
-                                </div>
-                                <div class="slider-promo__img-ibg">
-                                    <img src="images/promo slider/slide01/photoSlide01.png" alt="Полёт в аэротрубе для двоих!">
-                                </div>
-                                <div class="slider-promo__img_m-ibg">
-                                    <img src="images/promo slider/slide01/photoSlide01_mobile.png" alt="Полёт в аэротрубе для двоих!">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="sertificates">
-                    <div class="sertificates__container">
-                        <div class="sertificates__img">
-                            <img src="images/sertificates/01.jpg" alt="Сертификат в дизайнерском конверте">
-                        </div>
-                            <h2 class="sertificates__title title">Сертификат в дизайнерском конверте</h2>
-                            <ul class="sertificates__list">
-                                <li class="sertificates__item">Электронный сертификат - бесплатный</li>
-                                <li class="sertificates__item">Сертификат в подарочном конверте - 200р</li>
-                                <li class="sertificates__item">Срок действия сертификата - 3 месяца</li>
-                                <li class="sertificates__item">Бесплатная доставка в день заказа</li>
-                                <li class="sertificates__item">Есть возможность заменить впечатление по сертификату, если подарок не понравится</li>
-                            </ul>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
-                <div class="footer__container">
-                    <div class="footer__about">
-                        <a class="footer__logo logo" href="#" target="_blank">
-                            <img class="logo__img" src="images/logo.png" alt="logo__picture">
-                            <img class="logo__text" src="images/logo_text.png" alt="Дари Душой">
-                        </a>
-                        <div class="footer__rights"><p>Все права защищиены</p><p>© Дари Душой, 2022 г.</p></div>
-                    </div>
-                    <div class="footer__menu menu-footer">
-                        <h5 class="menu-footer__title">
-                            Меню
-                        </h5>
-                        <nav class="menu-footer__body">
-                            <ul class="menu-footer__list">
-                                <li class="menu-footer__item">
-                                    <a href="#catalog" class="menu__link">Каталог</a>
-                                </li>
-                                <li class="menu-footer__item">
-                                    <a href="#promo" class="menu__link">Акции</a>
-                                </li>
-                                <li class="menu-footer__item">
-                                    <a href="#" class="menu__link">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="footer__contacts contacts">
-                        <a class="contacts__link" href="tel:+79991234567">+7 (999) 123-45-67</a>
-                            <div class="contacts__socials socials">
-                            <a href="#" class="socials__link"><img src="images/socials/vk.svg" alt="vk"></a>
-                            <a href="#" class="socials__link"><img src="images/socials/instagram.svg" alt="vk"></a>
-                            </div>
-                    </div>
-                    <div class="footer__questions questions">
-                        <h4 class="questions__title">Остались вопросы?</h4>
-                        <div class="questions__text">Оставьте заявку, 
-                            мы свяжемся с Вами в ближайшее время
-                        </div>
-                        <a href="#" class="questions__btn button">Оставить заявку</a>
-                    </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/02.jpg"
+                    alt="Полет на мотопараплане"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Полет на мотопараплане
+                    </a>
+                  </h4>
+                  <div class="item-product__price">3 000 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
                 </div>
-            </footer>
+              </article>
+              <article
+                class="catalog__item item-product item-product_promotion"
+              >
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/03.jpg"
+                    alt="Полет в аэротрубе"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Полет в аэротрубе
+                    </a>
+                  </h4>
+                  <div class="item-product__price">от 1 800 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/04.jpg"
+                    alt="Вечер в куполе"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Вечер в куполе
+                    </a>
+                  </h4>
+                  <div class="item-product__price">3 000 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/05.jpg"
+                    alt="Прогулка на яхте «Чайка»"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Прогулка на яхте «Чайка»
+                    </a>
+                  </h4>
+                  <div class="item-product__price">от 3 500 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/06.jpg"
+                    alt="Велопрогулка с пикником"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Велопрогулка с пикником
+                    </a>
+                  </h4>
+                  <div class="item-product__price">3 000 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/07.jpg"
+                    alt="Драйв на квадроциклах"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Драйв на квадроциклах
+                    </a>
+                  </h4>
+                  <div class="item-product__price">от 1 800 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/08.jpg"
+                    alt="Запись песни в студии"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Запись песни в студии
+                    </a>
+                  </h4>
+                  <div class="item-product__price">5 000 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/09.jpg"
+                    alt="Поездка на болотоходах"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Поездка на болотоходах
+                    </a>
+                  </h4>
+                  <div class="item-product__price">5 000 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/10.jpg"
+                    alt="Игра в виртуальной реальности"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Игра в виртуальной реальности
+                    </a>
+                  </h4>
+                  <div class="item-product__price">600 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+              <article class="catalog__item item-product">
+                <a href="#" class="item-product__link">
+                  <img
+                    class="item-product__image-ibg"
+                    src="images/products/11.jpg"
+                    alt="Романтический пикник"
+                  />
+                </a>
+                <div class="item-product__body">
+                  <h4 class="item-product__name subtitle">
+                    <a href="#" class="item-product__link-title">
+                      Романтический пикник
+                    </a>
+                  </h4>
+                  <div class="item-product__price">2 500 ₽</div>
+                  <a class="item-product__btn button">Заказать</a>
+                  <a href="" class="item-product__link">Подробнее</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section id="promo" class="promo">
+          <div class="promo__container">
+            <div class="promo__slider slider slider-promo">
+              <div class="slider-promo__item slider__item">
+                <div class="slider-promo__body">
+                  <div class="slider-promo__label">Акция месяца</div>
+                  <h2 class="slider-promo__title">
+                    полёт в аэротрубе для двоих!
+                  </h2>
+                  <div class="slider-promo__prices prices-promo">
+                    <div class="prices-promo__price_old">4 000 ₽</div>
+                    <div class="prices-promo__price_new">3 200 ₽</div>
+                  </div>
+                  <a href="#" class="slider-promo__button button"
+                    >Заказать впечатление</a
+                  >
+                </div>
+                <div class="slider-promo__img-ibg">
+                  <img
+                    src="images/promo slider/slide01/photoSlide01.png"
+                    alt="Полёт в аэротрубе для двоих!"
+                  />
+                </div>
+                <div class="slider-promo__img_m-ibg">
+                  <img
+                    src="images/promo slider/slide01/photoSlide01_mobile.png"
+                    alt="Полёт в аэротрубе для двоих!"
+                  />
+                </div>
+              </div>
+              <div class="slider-promo__item slider__item">
+                <div class="slider-promo__body">
+                  <div class="slider-promo__label">Акция месяца</div>
+                  <h2 class="slider-promo__title">полет на мотопараплане</h2>
+                  <div class="slider-promo__prices prices-promo">
+                    <div class="prices-promo__price_old">6 000 ₽</div>
+                    <div class="prices-promo__price_new">5 200 ₽</div>
+                  </div>
+                  <a href="#" class="slider-promo__button button"
+                    >Заказать впечатление</a
+                  >
+                </div>
+                <div class="slider-promo__img-ibg">
+                  <img
+                    src="images/promo slider/slide01/photoSlide01.png"
+                    alt="Полёт в аэротрубе для двоих!"
+                  />
+                </div>
+                <div class="slider-promo__img_m-ibg">
+                  <img
+                    src="images/promo slider/slide01/photoSlide01_mobile.png"
+                    alt="Полёт в аэротрубе для двоих!"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sertificates">
+          <div class="sertificates__container">
+            <div class="sertificates__img">
+              <img
+                src="images/sertificates/01.jpg"
+                alt="Сертификат в дизайнерском конверте"
+              />
+            </div>
+            <h2 class="sertificates__title title">
+              Сертификат в дизайнерском конверте
+            </h2>
+            <ul class="sertificates__list">
+              <li class="sertificates__item">
+                Электронный сертификат - бесплатный
+              </li>
+              <li class="sertificates__item">
+                Сертификат в подарочном конверте - 200р
+              </li>
+              <li class="sertificates__item">
+                Срок действия сертификата - 3 месяца
+              </li>
+              <li class="sertificates__item">
+                Бесплатная доставка в день заказа
+              </li>
+              <li class="sertificates__item">
+                Есть возможность заменить впечатление по сертификату, если
+                подарок не понравится
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="faq">
+          <div class="faq__container">
+            <h2 class="faq__title title">Часто задаваемые вопросы</h2>
+            <div class="faq__accordion accordion" id="accordion-1">
+              <div class="accordion__item accordion__item_show">
+                <div class="accordion__header">
+                  <span>Могу ли я купить сертификат в подарок?</span>
+                </div>
+                <div class="accordion__body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquid, culpa alias fugit excepturi voluptatem, expedita
+                  mollitia voluptate eveniet omnis possimus aperiam accusamus.
+                  Ipsam itaque facere suscipit amet tempora autem et!
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__header">
+                  <span>Могу ли я поменять сертификат на другой?</span>
+                </div>
+                <div class="accordion__body">
+                  <span>Есть возможность заменить впечатление по сертификату, если
+                    подарок не понравится</span>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__header">
+                    <span>Могу ли я купить сертификат в подарок?</span>
+                </div>
+                <div class="accordion__body">Чо покайфу то и делайте</div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__header">
+                    <span>Могу ли я поменять сертификат на другой?</span>
+                </div>
+                <div class="accordion__body">Чо покайфу то и делайте</div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__header">
+                    <span>Могу ли я купить сертификат в подарок?</span>
+                </div>
+                <div class="accordion__body">Чо покайфу то и делайте</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__about">
+            <a class="footer__logo logo" href="#" target="_blank">
+              <img
+                class="logo__img"
+                src="images/logo.png"
+                alt="logo__picture"
+              />
+              <img
+                class="logo__text"
+                src="images/logo_text.png"
+                alt="Дари Душой"
+              />
+            </a>
+            <div class="footer__rights">
+              <p>Все права защищиены</p>
+              <p>© Дари Душой, 2022 г.</p>
+            </div>
+          </div>
+          <div class="footer__menu menu-footer">
+            <h5 class="menu-footer__title">Меню</h5>
+            <nav class="menu-footer__body">
+              <ul class="menu-footer__list">
+                <li class="menu-footer__item">
+                  <a href="#catalog" class="menu__link">Каталог</a>
+                </li>
+                <li class="menu-footer__item">
+                  <a href="#promo" class="menu__link">Акции</a>
+                </li>
+                <li class="menu-footer__item">
+                  <a href="#" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__contacts contacts">
+            <a class="contacts__link" href="tel:+79991234567"
+              >+7 (999) 123-45-67</a
+            >
+            <div class="contacts__socials socials">
+              <a href="#" class="socials__link"
+                ><img src="images/socials/vk.svg" alt="vk"
+              /></a>
+              <a href="#" class="socials__link"
+                ><img src="images/socials/instagram.svg" alt="vk"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__questions questions">
+            <h4 class="questions__title">Остались вопросы?</h4>
+            <div class="questions__text">
+              Оставьте заявку, мы свяжемся с Вами в ближайшее время
+            </div>
+            <a href="#" class="questions__btn button">Оставить заявку</a>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-	<script src="scripts/slick.min.js"></script>
+    <script src="scripts/slick.min.js"></script>
     <script src="scripts/slick.js"></script>
+    <script src="scripts/accordion.js"></script>
     <script src="scripts/scripts.js"></script>
-</body>
+  </body>
 </html>

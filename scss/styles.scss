@@ -729,7 +729,6 @@ body.lock{
 
     &__container {
         margin-bottom: rem(100);
-
     }
 
     &__slider {
@@ -750,7 +749,7 @@ body.lock{
         overflow: hidden;
         height: 100%;
         @media(max-width: $mobile) {
-            grid-template:  1fr 1fr / 1fr;
+            grid-template:  1fr 335px / 1fr;
         }
     }
 
@@ -987,7 +986,7 @@ body.lock{
         padding-top: rem(60);
         padding-bottom: rem(60);
         border-top: 1px solid #547147;
-       flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 
     &__about {
@@ -1103,5 +1102,99 @@ body.lock{
         max-width: rem(246);
         padding: rem(16) rem(32);
     }
+}
+
+
+/*====FAQ====================*/
+
+.faq {
+
+    &__container {
+        margin-bottom: rem(95);
+        @media(max-width: $mobile) {
+                margin-bottom: rem(60);
+        }
+    }
+
+    &__title {
+
+    }
+
+    &__accordion {
+    }
+}
+
+.accordion {
+    padding-top: rem(60);
+    @media(max-width: $mobile) {
+            padding-top: rem(30);
+    }
+    &__item {
+        padding-top: rem(25);
+        padding-bottom: rem(25);
+        &:not(:last-child){
+            border-bottom: 2px solid #EAEBEF;
+        }
+    }
+
+    &__header {
+        font-weight: 600;
+        font-size: rem(30);
+        line-height: percent(37, 30);
+        cursor:pointer;
+        transition: transform 0.2s ease-out;
+        position: relative;
+        margin-right: rem(10);
+        span{
+            display: inline-block;
+            max-width: 80%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: rem(50);
+            height: rem(50);
+            border-radius: 50%;
+            background-color: #E8E8E8;
+            background-image: url('../images/arrowDown.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            right: rem(20);
+            top: -10px;
+            transition: transform 0.2s ease-out;
+            @media(max-width: $mobile) {
+                width: rem(40);
+                height: rem(40);
+            }
+        }
+        @media(max-width: 840px) {
+            font-size: rem(16);
+        }
+        @media(any-hover: hover) {
+            &:hover{
+                color: #547147;
+            }
+        }
+    }
+
+    &__body {
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: percent(20, 16);
+        max-width: 70%;
+        margin-top: rem(10);
+        @media(max-width: $mobile) {
+            font-size: rem(14);
+            max-width: 80%;
+        }
+    }
+}
+
+.accordion__item_show .accordion__header::after {
+    transform: rotate(-180deg);
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__body {
+    display: none;
 }
 

@@ -848,7 +848,7 @@ body .lock {
 }
 @media (max-width: 47.99875em) {
   .slider-promo__item {
-    grid-template: 1fr 1fr/1fr;
+    grid-template: 1fr 335px/1fr;
   }
 }
 .slider-promo__body {
@@ -1152,4 +1152,93 @@ body .lock {
 .questions__btn {
   max-width: 15.375rem;
   padding: 1rem 2rem;
+}
+
+/*====FAQ====================*/
+.faq__container {
+  margin-bottom: 5.9375rem;
+}
+@media (max-width: 47.99875em) {
+  .faq__container {
+    margin-bottom: 3.75rem;
+  }
+}
+.accordion {
+  padding-top: 3.75rem;
+}
+@media (max-width: 47.99875em) {
+  .accordion {
+    padding-top: 1.875rem;
+  }
+}
+.accordion__item {
+  padding-top: 1.5625rem;
+  padding-bottom: 1.5625rem;
+}
+.accordion__item:not(:last-child) {
+  border-bottom: 2px solid #EAEBEF;
+}
+.accordion__header {
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 123.3333333333%;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+  position: relative;
+  margin-right: 0.625rem;
+}
+.accordion__header span {
+  display: inline-block;
+  max-width: 80%;
+}
+.accordion__header::after {
+  content: "";
+  position: absolute;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  background-color: #E8E8E8;
+  background-image: url("../images/arrowDown.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  right: 1.25rem;
+  top: -10px;
+  transition: transform 0.2s ease-out;
+}
+@media (max-width: 47.99875em) {
+  .accordion__header::after {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 840px) {
+  .accordion__header {
+    font-size: 1rem;
+  }
+}
+@media (any-hover: hover) {
+  .accordion__header:hover {
+    color: #547147;
+  }
+}
+.accordion__body {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 125%;
+  max-width: 70%;
+  margin-top: 0.625rem;
+}
+@media (max-width: 47.99875em) {
+  .accordion__body {
+    font-size: 0.875rem;
+    max-width: 80%;
+  }
+}
+
+.accordion__item_show .accordion__header::after {
+  transform: rotate(-180deg);
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__body {
+  display: none;
 }
