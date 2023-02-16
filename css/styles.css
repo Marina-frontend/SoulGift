@@ -1361,3 +1361,101 @@ body .lock {
   display: block;
   margin-right: 0.625rem;
 }
+
+/*========popup products========================*/
+.popup-product__content {
+  padding: 5.625rem 2.5rem 2.5rem;
+  max-width: 81.25rem;
+}
+.popup-product__slider_big {
+  margin-bottom: 1.875rem;
+}
+.popup-product__title {
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.popup-product-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.product-description {
+  display: grid;
+}
+.product-description__details {
+  display: flex;
+  gap: 1.875rem;
+}
+.product-description__details:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+.product-description__price {
+  font-weight: 700;
+  font-size: 3.125rem;
+  line-height: 108%;
+}
+@media (max-width: 47.99875em) {
+  .product-description__price {
+    font-size: 1.875rem;
+  }
+}
+.product-description__button {
+  max-width: 19.1875rem;
+  padding: 1.125rem;
+}
+.product-description__button:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 47.99875em) {
+  .product-description__button:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
+.product-description__select option {
+  background-color: #E8E8E8;
+  border-radius: 2.5rem;
+  padding: 0.625rem 1.25rem;
+}
+
+.more-description {
+  display: grid;
+  gap: 1.25rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 125%;
+}
+.more-description__title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 120%;
+}
+.more-description__subtitle {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 125%;
+}
+.more-description__item {
+  position: relative;
+}
+.more-description__item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.more-description__item_bulleted {
+  margin-left: 0.9375rem;
+}
+.more-description__item_bulleted:before {
+  content: "";
+  position: absolute;
+  background-color: #547147;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  left: -15px;
+  top: 10px;
+  margin-top: -5px;
+}
