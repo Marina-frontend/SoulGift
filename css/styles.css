@@ -1242,3 +1242,122 @@ body .lock {
 .accordion__item:not(.accordion__item_show) .accordion__body {
   display: none;
 }
+
+/*=======popup form=============================*/
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+  z-index: 100;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.875rem 0.625rem;
+}
+.popup__content {
+  background-color: #fff;
+  border-radius: 1.25rem;
+  position: relative;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: perspective(600px) translate(0px, -100%) rotate(45deg);
+}
+.popup__close {
+  position: absolute;
+  right: 1.875rem;
+  top: 1.875rem;
+  font-size: 1.875rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.popup.open .popup__content {
+  opacity: 1;
+  transform: perspective(0) translate(0px, 0%) rotateX(0deg);
+}
+
+.popup-form__content {
+  max-width: 33.125rem;
+  padding: 1.875rem;
+}
+.popup-form__title {
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 113.3333333333%;
+  margin-bottom: 0.9375rem;
+}
+@media (max-width: 47.99875em) {
+  .popup-form__title {
+    font-size: 1.5rem;
+  }
+}
+.popup-form__text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 125%;
+}
+.popup-form__text:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+@media (max-width: 47.99875em) {
+  .popup-form__text:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.form__input {
+  border: 1px solid #C2C2C2;
+  border-radius: 10px;
+  padding: 1.25rem 0.9375rem;
+}
+.form__textarea {
+  border: 1px solid #C2C2C2;
+  border-radius: 10px;
+  padding: 1.25rem 0.9375rem;
+  height: 9.6875rem;
+}
+@media (max-width: 47.99875em) {
+  .form__textarea {
+    height: 7.1875rem;
+  }
+}
+.form__label {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 166.6666666667%;
+}
+.form__link {
+  text-decoration: underline;
+}
+.form__button {
+  padding: 1rem 2rem;
+}
+
+.checkbox__agreement {
+  display: flex;
+  align-items: flex-start;
+}
+.checkbox__agreement input {
+  display: block;
+  margin-right: 0.625rem;
+}
