@@ -144,10 +144,13 @@
 .slider-big__item {
   min-height: rem(450);
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .slider-big__item img {
-  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .popup-product__slider_small {
