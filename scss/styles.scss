@@ -199,10 +199,10 @@ body{
     font-family: $fontFamily;
     color: $mainColor;
     font-weight: 600;
-    .lock{
-        overflow: hidden;
-        touch-action: none;
-    }
+}
+
+body.lock {
+    overflow: hidden;
 }
 /*-------------------------------*/
 .wrapper {
@@ -518,7 +518,7 @@ body.lock{
             align-items: center;
             padding: rem(20) rem(30);
             gap: rem(10);
-            max-width: 305px;
+            max-width: rem(307);
             background: #F6F1E4;
             border-radius: 50px;
             border: 1px solid #F6F1E4;
@@ -615,12 +615,13 @@ body.lock{
     }
     &__image-ibg {
         width: 100%;
+        border-radius: rem(20) rem(20) 0 0;
     }
 
     &__body {
         display: grid;
         grid-auto-flow: row;
-        grid-template: 1fr auto minmax(32px, 48px) minmax(16px, 24px)/ 1fr;
+        grid-template: 1fr auto minmax(32px, 61px) minmax(16px, 24px)/ 1fr;
         justify-items: center;
         text-align: center;
         align-items: start;
@@ -675,8 +676,7 @@ body.lock{
     &__link {
         font-weight: 500;
         font-size: rem(20);
-        line-height: percent(24, 20); 
-        margin: rem(15) 0;  
+        line-height: percent(24, 20);  
         color: #888888;
         @media(max-width: $mobile) {
             font-size: rem(12);
@@ -817,7 +817,7 @@ body.lock{
     &__button {
         min-height: rem(48);
         padding: rem(12) rem(24);
-        max-width: rem(293);
+        max-width: rem(295);
     }
 
     &__img-ibg  {
@@ -1099,7 +1099,7 @@ body.lock{
     }
 
     &__btn {
-        max-width: rem(246);
+        max-width: rem(248);
         padding: rem(16) rem(32);
     }
 }
@@ -1340,6 +1340,9 @@ body.lock{
     &__content {
         padding: rem(90) rem(40) rem(40);
         max-width: rem(1300);
+        @media(max-width: rem(900)) {
+            flex-direction: column;
+        }
     }
 
     &__sliders {
