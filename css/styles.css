@@ -714,6 +714,7 @@ body.lock {
 .item-product__link {
   display: block;
   overflow: hidden;
+  position: relative;
 }
 .item-product__image-ibg {
   width: 100%;
@@ -796,6 +797,24 @@ body.lock {
 @media (any-hover: hover) {
   .item-product__link:hover {
     border-bottom: 1px solid #888888;
+  }
+}
+
+.item-promo__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.9375rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 100%;
+  color: #FFFFFF;
+  background: #DFA650;
+  border-radius: 0px 20px;
+}
+@media (max-width: 47.99875em) {
+  .item-promo__label {
+    font-size: 0.875rem;
   }
 }
 
