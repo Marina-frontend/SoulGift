@@ -496,8 +496,10 @@ body.lock {
 .socials__link {
   transition: opacity 0.3s ease 0;
 }
-.socials__link:hover {
-  opacity: 0.9;
+@media (any-hover: hover) {
+  .socials__link:hover {
+    opacity: 0.9;
+  }
 }
 
 .flex-socials {

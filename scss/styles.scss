@@ -374,8 +374,10 @@ body.lock{
     
 	&__link {
         transition: opacity 0.3s ease 0;
-        &:hover{
-            opacity: 0.9;
+        @media (any-hover: hover) {
+            &:hover{
+                opacity: 0.9;
+            }
         }
 	}
 }
