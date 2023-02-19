@@ -75,10 +75,6 @@
   }
 }
 
-.slider-main__item {
-  min-height: rem(380);
-}
-
 .slider-main__item img {
   max-width: 100%;
 }
@@ -136,5 +132,33 @@
 }
 
 .slider-promo__item img {
+  max-width: 100%;
+}
+
+/*==========================*/
+.popup-product__slider_big {
+  position: relative;
+  max-width: 450px;
+}
+
+.slider-big__item {
+  min-height: rem(450);
+  border-radius: 20px;
+}
+
+.slider-big__item img {
+  max-width: 100%;
+}
+
+.popup-product__slider_small {
+  position: relative;
+  max-width: 450px;
+}
+
+.slider-small__item {
+  min-height: rem(130);
+}
+
+.slider-small__item img {
   max-width: 100%;
 }
