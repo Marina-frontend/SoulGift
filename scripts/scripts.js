@@ -6,13 +6,7 @@ $(document).ready(function(){
     });
 });
 
-$(window).resize(function () { 
-    var width = $('body').innerWidth();
-    if (width < 720) {
-        $('.logo__text').addClass('hidden');
-        $('.header__socials').addClass('hidden');
-    } 
-});
+
 
 
 
