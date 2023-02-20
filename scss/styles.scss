@@ -1036,6 +1036,7 @@ body.lock{
     &__logo {
         margin-right: rem(15);
         min-width: rem(70);
+        z-index: 1;
         img {
             @media(max-width: $mobile){
                 width: 100%;

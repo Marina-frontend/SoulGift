@@ -1165,6 +1165,7 @@ body.lock {
 .footer__logo {
   margin-right: 0.9375rem;
   min-width: 4.375rem;
+  z-index: 1;
 }
 @media (max-width: 47.99875em) {
   .footer__logo img {
