@@ -139,12 +139,14 @@
 .popup-product__slider_big {
   position: relative;
   max-width: 450px;
+  width: 100%;
 }
 
 .slider-big__item {
   min-height: rem(450);
   border-radius: 20px;
   overflow: hidden;
+  margin: 0 7px;
 }
 
 .slider-big__item img {
@@ -156,12 +158,13 @@
 .popup-product__slider_small {
   position: relative;
   max-width: 450px;
+  width: 100%;
 }
 
 .slider-small__item {
-  min-height: rem(130);
+  margin: 0 7px;
 }
 
 .slider-small__item img {
-  max-width: 100%;
+  width: 100%;
 }
