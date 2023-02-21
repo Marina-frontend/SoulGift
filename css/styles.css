@@ -111,6 +111,10 @@ h6 {
 }
 
 /* Слайд */
+.slick-slide {
+  margin: 0 7px;
+}
+
 /* Слайд активный */
 /* Слайд основной */
 /* Слайд по центру */
@@ -240,7 +244,6 @@ h6 {
   min-height: rem(450);
   border-radius: 20px;
   overflow: hidden;
-  margin: 0 7px;
 }
 
 .slider-big__item img {
@@ -253,10 +256,6 @@ h6 {
   position: relative;
   max-width: 450px;
   width: 100%;
-}
-
-.slider-small__item {
-  margin: 0 7px;
 }
 
 .slider-small__item img {
@@ -985,7 +984,8 @@ body.lock {
     position: absolute;
     top: 0;
     right: 0;
-    width: 33.125rem;
+    max-width: 33.125rem;
+    width: 50%;
     height: 100%;
     -o-object-fit: contain;
        object-fit: contain;

@@ -859,7 +859,8 @@ body.lock{
         position: absolute;
         top: 0;
         right: 0;
-        width: rem(530);
+        max-width: rem(530);
+        width: 50%;
         height: 100%;
         object-fit: contain;
         border-radius: 20px;

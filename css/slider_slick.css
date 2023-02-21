@@ -17,6 +17,10 @@
 }
 
 /* Слайд */
+.slick-slide {
+  margin: 0 7px;
+}
+
 /* Слайд активный */
 /* Слайд основной */
 /* Слайд по центру */
@@ -146,7 +150,6 @@
   min-height: rem(450);
   border-radius: 20px;
   overflow: hidden;
-  margin: 0 7px;
 }
 
 .slider-big__item img {
@@ -159,10 +162,6 @@
   position: relative;
   max-width: 450px;
   width: 100%;
-}
-
-.slider-small__item {
-  margin: 0 7px;
 }
 
 .slider-small__item img {
