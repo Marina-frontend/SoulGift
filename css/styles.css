@@ -894,7 +894,7 @@ body.lock {
 .slider-promo__item {
   display: grid;
   grid-template: 1fr/minmax(300px, 600px) auto;
-  background: url("../images/promo slider/slide01/backgroundSlider.png");
+  background: url("../images/promo_slider/slide01/backgroundSlider.png");
   background-repeat: repeat;
   background-size: cover;
   position: relative;
@@ -910,14 +910,20 @@ body.lock {
 .slider-promo__body {
   position: relative;
   margin: 3.75rem;
-  max-width: 36.1875rem;
+  max-width: 37.5rem;
   display: grid;
   grid-auto-flow: row;
   grid-template: minmax(53px, 64px) 1fr 4.0625rem auto/1fr;
 }
+@media (max-width: 62.5rem) {
+  .slider-promo__body {
+    width: 50%;
+  }
+}
 @media (max-width: 47.99875em) {
   .slider-promo__body {
     margin: 1.875rem 0.625rem 1.875rem 1.25rem;
+    width: 90%;
   }
 }
 .slider-promo__label {
@@ -985,13 +991,16 @@ body.lock {
     top: 0;
     right: 0;
     max-width: 33.125rem;
-    width: 50%;
+    width: 40%;
     height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
     border-radius: 20px;
     border-radius: 1.25rem;
+    overflow: visible;
   }
+}
+@media (min-width: 47.99875em) and (min-width: 81.25rem) {
   .slider-promo__img-ibg:before {
     content: "";
     left: 0;
@@ -1020,6 +1029,8 @@ body.lock {
     border-radius: 20px;
     border-radius: 1.25rem;
   }
+}
+@media (max-width: 47.99875em) and (max-width: 27.5625rem) {
   .slider-promo__img_m-ibg:before {
     content: "";
     left: 0;
