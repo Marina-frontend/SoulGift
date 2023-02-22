@@ -659,31 +659,28 @@
           </a>
           <h2 class="popup-form__title">Отправьте заявку</h2>
           <p class="popup-form__text">Мы свяжемся с Вами в ближайшее время</p>
-          <form class="form">
+          <form id="form" class="form">
             <input
-              class="form__input"
+              class="form__input _req"
               type="text"
-              name="Name"
-              placeholder="Имя"
-              required>
+              name="name"
+              placeholder="Имя">
             <input
-              class="form__input"
+              class="form__input _req _tel"
               type="tel"
-              name="Phonenumber"
-              placeholder="Телефон"
-              required>
+              name="phonenumber"
+              placeholder="Телефон">
             <textarea
               class="form__textarea"
-              name="Comment"
+              name="comment"
               placeholder="Комментарий"
             ></textarea>
-            <div class="checkbox__agreement">
-              <input id="Agreement"
+            <div class="checkbox__agreement _req">
+              <input id="agreement"
                 class="form__input"
                 type="checkbox"
-                name="Agreement"
-                required>
-              <label class="form__label" for="Agreement">
+                name="agreement" checked>
+              <label class="form__label" for="agreement">
                 Отправляя заявку Вы соглашаетесь на обработку
                 <a href="#" class="form__link">персональных данных</a>
               </label>
@@ -1055,6 +1052,7 @@
     <script src="scripts/slick.js"></script>
     <script src="scripts/accordion.js"></script>
     <script src="scripts/popups.js"></script>
+    <script src="scripts/formvalidate.js"></script>
     <script src="scripts/scripts.js"></script>
   </body>
 </html>

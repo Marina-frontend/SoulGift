@@ -1455,11 +1455,27 @@ body.lock {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  position: relative;
+}
+.form:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255) url("loading.gif") center/200px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
 }
 .form__input {
   border: 1px solid #C2C2C2;
   border-radius: 10px;
   padding: 1.25rem 0.9375rem;
+}
+.form__input:focus {
+  box-shadow: 0 0 15px #547147;
 }
 .form__textarea {
   border: 1px solid #C2C2C2;
@@ -1468,10 +1484,8 @@ body.lock {
   height: 9.6875rem;
   resize: vertical;
 }
-@media (max-width: 47.99875em) {
-  .form__textarea {
-    height: 7.1875rem;
-  }
+.form__textarea:focus {
+  box-shadow: 0 0 10px #547147;
 }
 .form__label {
   font-weight: 400;
@@ -1485,6 +1499,15 @@ body.lock {
   padding: 1rem 2rem;
 }
 
+.form._sending:after {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.form__input._error {
+  box-shadow: 0 0 10px red;
+}
+
 .checkbox__agreement {
   display: flex;
   align-items: flex-start;
@@ -1492,6 +1515,10 @@ body.lock {
 .checkbox__agreement input {
   display: block;
   margin-right: 0.625rem;
+}
+
+.checkbox__agreement._error input {
+  box-shadow: 0 0 10px red;
 }
 
 /*========popup products========================*/
