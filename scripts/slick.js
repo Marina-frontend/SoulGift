@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$('.slider').slick({
         arrows: false,
+		lazyLoad:'progressive' ,
 		dots:true,
 		slidesToShow:1,
 		autoplay: true,
@@ -11,6 +12,7 @@ $(document).ready(function(){
         arrows: false,
 		dots:false,
 		autoplay: false,
+		lazyLoad:'progressive' ,
 		fade: true,
 		asNavFor: ".popup-product__slider_small",
 	});
@@ -18,6 +20,7 @@ $(document).ready(function(){
         arrows: false,
 		dots:false,
 		slidesToShow: 3,
+		lazyLoad:'progressive' ,
 		autoplay: false,
 		asNavFor: ".popup-product__slider_big",
 	});
