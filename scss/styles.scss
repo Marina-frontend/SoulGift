@@ -1378,6 +1378,7 @@ body.lock{
         border-radius: 10px;
         padding: rem(20) rem(15);
         height: rem(155);
+        resize: vertical;
         @media(max-width: $mobile) {
             height: rem(115);
         }

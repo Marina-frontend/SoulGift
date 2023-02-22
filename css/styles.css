@@ -1466,6 +1466,7 @@ body.lock {
   border-radius: 10px;
   padding: 1.25rem 0.9375rem;
   height: 9.6875rem;
+  resize: vertical;
 }
 @media (max-width: 47.99875em) {
   .form__textarea {
