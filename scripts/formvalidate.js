@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 let result = await response.json();
                 alert(result.message);
-                formPreview.innerHTML = '';
                 form.reset();
                 form.classList.remove('_sending');
             } else {
@@ -65,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
         input.classList.remove('_error');
     }
 
-    //функция теста телефона
     function phoneTest(input) {
         return !/^((\+7|7|8)+([0-9]){10})$/.test(input.value);
     }
